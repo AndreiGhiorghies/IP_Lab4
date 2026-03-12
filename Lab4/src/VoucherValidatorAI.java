@@ -1,30 +1,39 @@
+import lombok.Getter;
+import lombok.Setter;
+
 @Getter
 @Setter
 public class VoucherValidatorAI {
-    private String numeModelML;
-    private double pragRiscAbuz;
+    private String codVoucher;
+    private double procentReducere;
+    private double valoareMinimaCos;
+    private int utilizariRamase;
+    private boolean esteActiv;
 
-    public VoucherValidatorAI(String numeModelML, double pragRiscAbuz) {
-        this.numeModelML = numeModelML;
-        this.pragRiscAbuz = pragRiscAbuz;
+    // Constructor
+    public VoucherValidatorAI(String codVoucher, double procentReducere, double valoareMinimaCos, int utilizariRamase) {
+        this.codVoucher = codVoucher;
+        this.procentReducere = procentReducere;
+        this.valoareMinimaCos = valoareMinimaCos;
+        this.utilizariRamase = utilizariRamase;
+        this.esteActiv = true;
     }
 
-    public boolean valideazaVoucherInteligent(String codVoucher, String adresaIpUser, int conturiCreatePeAcelasiIp) {
+    public boolean esteValidPentruCos(String codIntrodus, double valoareTotalaCos) {
         return false;
     }
 
-    public void antreneazaModelCuDateNoi(String fisierDateIstoric) {
+    public void consumaVoucher() {
     }
 
-    public double calculeazaScorComportamentBot(int clickuriPeSecunda) {
+    public double calculeazaSumaRedusa(double valoareInitiala) {
         return 0.0;
     }
 
-    public void ajusteazaPragRisc(double noulPrag, boolean esteCampanieActiva) {
-
+    public void dezactiveazaVoucher() {
     }
 
-    public String genereazaExplicatieRespingere(String codVoucher, String adresaIpUser) {
+    public String obtineMotivRespingere(String codIntrodus, double valoareTotalaCos) {
         return "";
     }
 }
